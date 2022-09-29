@@ -54,7 +54,7 @@ async function list(request, response) {
     response.status(200).json({data: list});
 }
 
-// LIKE FUNCTIONS
+// Function used to increment likes. READ -> UPDATE
 async function incrementLikes(request, response) {
     const { product_title, product_description, product_image, product_price, product_likes }= await service.read(request.params.product_id);
     const altered = {
@@ -68,7 +68,7 @@ async function incrementLikes(request, response) {
     response.status(200).json({data: updated});
 
 }
-
+// Function used to decrement likes. READ -> UPDATE
 async function decrementLikes(request, response) {
     const { product_title, product_description, product_image, product_price, product_likes }= await service.read(request.params.product_id);
     const altered = {
@@ -84,6 +84,7 @@ async function decrementLikes(request, response) {
 
 // ROUTER-LEVEL MIDDLEWARE (HELPERS)
 
+// Quick-Fix for a SQL crash. Without this middleware, /products/1-1/...   would crash the server.
 function isNumber(request, response, next) {
     const product_id = request.params.product_id;
     
@@ -99,6 +100,8 @@ function isNumber(request, response, next) {
     }
 }
 
+// Checks to see if the product exists on the database.
+// If found, assigns the product to the response locals.
 async function productExists(request, response, next) {
 
     const found = await service.read(response.locals.product_id);
@@ -112,6 +115,7 @@ async function productExists(request, response, next) {
     })
 }
 
+// Checks to see if the title is of valid length (Above 2 chars)
 function titleIsValid(request, response, next){
     const { data: {product_title} = {} } = request.body;
     if(product_title.length > 2){
@@ -124,7 +128,7 @@ function titleIsValid(request, response, next){
         })
     }
 }
-
+// Checks to see if the description is of valid length. (Above 20 chars)
 function descriptionIsValid(request, response, next) {
     const { data: {product_description} = {}} = request.body;
 
@@ -139,6 +143,8 @@ function descriptionIsValid(request, response, next) {
     }
 }
 
+// Checks if the likes can be parsed to a Float.
+// Denies the request if found not to be an Float.
 function priceIsValid(request, response, next){
     const { data: {product_price} = {}} = request.body;
 
@@ -153,6 +159,8 @@ function priceIsValid(request, response, next){
     }
 }
 
+// Checks if the likes can be parsed to an Integer.
+// Denies the request if found not to be an Int.
 function likesIsValid(request, response, next) {
     const { data: {product_likes} ={} } = request.body;
     
