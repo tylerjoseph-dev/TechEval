@@ -7,7 +7,7 @@ const {DATABASE_URL} = process.env;
 
 module.exports = {
 
-  development: {
+  production: {
     client: 'postgresql',
     pool: {min: 1, max: 5},
     connection: DATABASE_URL,
