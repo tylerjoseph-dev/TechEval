@@ -1,0 +1,72 @@
+[
+    {
+        "product_title": "Castles Hill",
+        "product_description": "An exquisite rendition of an ancient castle with a storm looming in the distance.",
+        "product_image": "https://i.imgur.com/c8MS4VN.png",
+        "product_price": 119.99,
+        "product_likes": 48
+    },
+    {
+        "product_title": "Scholarly Walk",
+        "product_description": "A scholar takes a walk through the university botanical garden.",
+        "product_image": "https://i.imgur.com/qevFUIm.png",
+        "product_price": 109.99,
+        "product_likes": 72
+    },
+    {
+        "product_title": "Scholarly Walk v2",
+        "product_description": "A scholar happens upon a fork in the road, full of indecision.",
+        "product_image": "https://i.imgur.com/fz3GuYZ.png",
+        "product_price": 109.99,
+        "product_likes": 13
+    },
+    {
+        "product_title": "Neurological Collapse",
+        "product_description": "An artists depiction of the synapses of the brain.",
+        "product_image": "https://i.imgur.com/8WHpEVh.png",
+        "product_price": 149.99,
+        "product_likes": 134
+    },
+    {
+        "product_title": "Neurological Collapse v2",
+        "product_description": "An artists depiction of synapses communicating with neighboring neurons.",
+        "product_image": "https://i.imgur.com/wGvQwiI.png",
+        "product_price": 139.99,
+        "product_likes": 110
+    },
+    {
+        "product_title": "Mists of Time",
+        "product_description": "A veiled figure watches over the Mists of Time",
+        "product_image": "https://i.imgur.com/zXB72Sx.png",
+        "product_price": 124.99,
+        "product_likes": 520
+    },
+    {
+        "product_title": "Mists of Time v2",
+        "product_description": "A veiled figure watches as the Mists of Time is corrupted",
+        "product_image": "https://i.imgur.com/dgd6Ibh.png",
+        "product_price": 99.99,
+        "product_likes": 2
+    },
+    {
+        "product_title": "Dandelion Walk",
+        "product_description": "A gypsy walks the dandelion path",
+        "product_image": "https://i.imgur.com/fHDY3bP.png",
+        "product_price": 74.99,
+        "product_likes": 45
+    },
+    {
+        "product_title": "Robemaster Avzor",
+        "product_description": "The depiction of the great robemaker, Avzor.",
+        "product_image": "https://i.imgur.com/Dn76tJn.png",
+        "product_price": 113.99,
+        "product_likes": 491
+    },
+    {
+        "product_title": "Robes of Legends",
+        "product_description": "An artists depiction of the Robes of Legends, created by master robemaker Avzor.",
+        "product_image": "https://i.imgur.com/rhEyup7.png",
+        "product_price": 107.99,
+        "product_likes": 99
+    }
+]
