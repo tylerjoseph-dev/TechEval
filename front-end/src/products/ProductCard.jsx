@@ -4,7 +4,6 @@ import {Card, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({product}) => {
-  const URL = process.env.REACT_APP_BACKEND_API
 
   return (
     <Card style={{ width: '30rem', marginLeft:'15px', marginTop: '15px'}}>

@@ -24,7 +24,7 @@ const CreateProduct = () => {
     try{
       setErrors(null);
       console.log(formData);
-      await axios.post(`http://${URL}/products`,{data: formData})//.then(history.push('/products'));
+      await axios.post(`${URL}/products`,{data: formData})//.then(history.push('/products'));
       history.push('/products')
     }catch(e){
       setErrors(e.response.data.error)

@@ -12,16 +12,16 @@ const ProductView = () => {
 
     const handleDelete = async (event) => {
         event.preventDefault();
-        await axios.delete(`http://${URL}/products/${product.product_id}`);
+        await axios.delete(`${URL}/products/${product.product_id}`);
         history.push('/products');
       }
 
     const onSubmit = async () => {
         if(isLikeClicked){
-            await axios.delete(`http://${URL}/products/${product.product_id}/like`);
+            await axios.delete(`${URL}/products/${product.product_id}/like`);
             localStorage.setItem(`techeval_${product_id}`, false);
         }else{
-            await axios.post(`http://${URL}/products/${product.product_id}/like`);
+            await axios.post(`${URL}/products/${product.product_id}/like`);
             localStorage.setItem(`techeval_${product_id}`, true);
         }
         window.location.reload()
@@ -31,7 +31,7 @@ const ProductView = () => {
     useEffect(() => {
         const abortController = new AbortController();
 
-        axios.get(`http://${URL}/products/${product_id}`, {signal: abortController.signal})
+        axios.get(`${URL}/products/${product_id}`, {signal: abortController.signal})
             .then(resp => setProduct(resp.data.data));
 
     }, [])

@@ -22,7 +22,7 @@ const UpdateProduct = () => {
   const [errors, setErrors] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://${URL}/products/${product_id}`).then((response) => setFormData({...response.data.data}));
+    axios.get(`${URL}/products/${product_id}`).then((response) => setFormData({...response.data.data}));
   }, [])
 
 
@@ -31,7 +31,7 @@ const UpdateProduct = () => {
     try{
       setErrors(null);
       console.log(formData);
-      await axios.put(`http://${URL}/products/${product_id}`,{data: formData})//.then(history.push('/products'));
+      await axios.put(`${URL}/products/${product_id}`,{data: formData})//.then(history.push('/products'));
       history.push('/products')
     }catch(e){
       setErrors(e.response.data.error)

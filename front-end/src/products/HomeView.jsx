@@ -9,7 +9,7 @@ const HomeView = () => {
 
     useEffect(() => {
         const abortController = new AbortController();
-        axios.get(`http://${URL}/products`, {signal: abortController.signal})
+        axios.get(`${URL}/products`, {signal: abortController.signal})
           .then(response => setProducts(response.data.data))
     }, [])
     
