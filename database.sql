@@ -3,6 +3,6 @@
         product_title VARCHAR(50) NOT NULL,
         product_description VARCHAR(255) NOT NULL,
         product_image VARCHAR(255) NOT NULL,
-        product_price DECIMAL(8,2) NOT NULL DEFAULT TO 0.00,
-        product_likes INTEGER NOT NULL DEFAULT TO 0,
+        product_price DECIMAL(8,2) NOT NULL DEFAULT 0.00,
+        product_likes INTEGER NOT NULL default 0
     )
